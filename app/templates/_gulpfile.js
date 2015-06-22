@@ -40,7 +40,7 @@ function bundle() {
 
 // html
 gulp.task('html', function() {
-  return gulp.src('./src/templates/**/*')
+  return gulp.src('./src/templates/**/[^_]*.jade')
     .pipe(processhtml())
     .pipe(gulp.dest('build'))
     .pipe(browserSync.stream());
